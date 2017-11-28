@@ -1,0 +1,11 @@
+3)
+width: 70%;
+max-width: 1280px;
+min-width: 480px;
+
+4)
+Wenn Sie die Größe einer Box mit absoluten Werten festlegen (z. B. eine feste Pixelbreite / -höhe), passt der Inhalt möglicherweise nicht in die zulässige Größe. In diesem Fall überläuft der Inhalt die Box. Um zu kontrollieren, was in solchen Fällen passiert, können wir die overflowEigenschaft verwenden. Es sind mehrere mögliche Werte erforderlich, die häufigsten sind jedoch:
+
+auto: Wenn zu viel Inhalt vorhanden ist, wird der überlaufende Inhalt ausgeblendet und die Bildlaufleisten werden angezeigt, damit der Benutzer den gesamten Inhalt sehen kann.
+hidden: Wenn zu viel Inhalt vorhanden ist, wird der überlaufende Inhalt ausgeblendet.
+visible: Wenn zu viel Inhalt vorhanden ist, wird der überlaufende Inhalt außerhalb der Box angezeigt (dies ist normalerweise das Standardverhalten.)

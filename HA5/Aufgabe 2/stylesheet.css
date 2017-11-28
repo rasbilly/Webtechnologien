@@ -1,0 +1,21 @@
+
+    
+#liste{
+    padding: 0px;
+    margin-top:0px
+}
+
+#zeile{
+    display: inline-block;
+    border-left-style: dotted;
+    border-right-style: dotted;
+    margin-left: 20px;
+}
+
+#zeile:nth-child(2n) {
+      font-style: italic
+  }
+  
+#uber{
+    margin-bottom: 0
+}

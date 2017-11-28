@@ -1,0 +1,39 @@
+
+#uberschrieft{
+	font-weight:bold
+}
+
+#font{
+	font-family:"Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
+}
+
+#size{
+	font-size:larger
+}
+
+#color{
+	color:lime
+}
+
+#background{
+	background-color:aqua
+}
+
+#transform{
+	text-transform:uppercase
+}
+
+#deko{
+	text-decoration:underline
+}
+
+table{
+	width:350px;
+	height:250px;
+	border-style: solid;
+	border-width: 1px;
+}
+td{
+border-style: solid;
+	border-width: 1px;
+}

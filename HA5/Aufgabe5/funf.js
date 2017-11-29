@@ -13,6 +13,10 @@ Vector.prototype.minus = function(vec){
     return new Vector(this.x - vec.x, this.y - vec.y)
 }
 
+Vector.prototype.length=function(){
+  return Math.sqrt(this.x*this.x+this.y*this.this.y)
+}
+
 
 
 console.log(new Vector(1, 2).plus(new Vector(2, 3)));

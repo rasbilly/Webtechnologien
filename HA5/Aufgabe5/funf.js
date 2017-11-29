@@ -13,9 +13,9 @@ Vector.prototype.minus = function(vec){
     return new Vector(this.x - vec.x, this.y - vec.y)
 }
 
-Object.defineProperty(Vector.prototype,"lenght",{
+Object.defineProperty(Vector.prototype,"length",{
     get:function(){
-         return Math.sqrt(this.x*this.x+this.y*this.this.y)
+         return Math.sqrt(this.x*this.x+this.y*this.y)
     }
 })
 //Vector.prototype.length=function(){

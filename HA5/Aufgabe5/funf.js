@@ -35,7 +35,9 @@ console.log(new Vector(3, 4).length);
 //_--------------------------------------------------------
 function logFive(para){
     for(var i = 0;i<5;i++){
+        if(para.naechster()){
         console.log(para.wert())
+        }
     }
 }
 
@@ -50,11 +52,10 @@ ArraySeq.prototype.wert = function(){
 
 ArraySeq.prototype.naechster = function(){
     if(this.p<=this.arr.length-1){
-    this.p++
-    return true
-        
+    this.p++;
+    return true;
     }else{
-        return false
+        return false;
     }
 }
 

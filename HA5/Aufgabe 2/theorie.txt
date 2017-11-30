@@ -9,3 +9,45 @@ Wenn Sie die Größe einer Box mit absoluten Werten festlegen (z. B. eine feste 
 auto: Wenn zu viel Inhalt vorhanden ist, wird der überlaufende Inhalt ausgeblendet und die Bildlaufleisten werden angezeigt, damit der Benutzer den gesamten Inhalt sehen kann.
 hidden: Wenn zu viel Inhalt vorhanden ist, wird der überlaufende Inhalt ausgeblendet.
 visible: Wenn zu viel Inhalt vorhanden ist, wird der überlaufende Inhalt außerhalb der Box angezeigt (dies ist normalerweise das Standardverhalten.)
+
+Arten:
+inline
+block
+inline block
+
+inline: 
+- Elemente erzeugen eine oder mehrere inline-boxen
+- in mehreren Teile zerlegt wenn Zeilenumbruch / zu wenig platz
+- Breite durch Inhalt bestimmt
+- Höhe in der Regel durch Schriftart / line-height
+
+
+block:
+- gesamte Breite des Elternelemntes
+- mehrere Block boxen untereinander angeordnet
+- höhe kann 0 sein
+
+- hoch wie inhalt 
+
+
+inline-block: 
+eigenschaften von beiden
+
+verläuft in einer Zeile -> nicht teilbar auf mehrere Zeilen
+
+- so breit wie nötig und so schmall wie möglich
+- breite festgelegt durch width
+- höhe vom inhalt abhängig kann durch height beeinflusst werden
+
+
+
+
+inline: a; span; strong; h1
+block: article; div; p 
+inline-block: img
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes
+
+
+
+Die Werte für margin von Elementen, die nicht positioniert sind, addieren sich bei vertikalen Abständen nicht, sondern nur der größere Wert des oberen oder unteren Elements wird benutzt – diesen Effekt nennt man collapsing margins.

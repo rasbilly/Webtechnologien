@@ -26,6 +26,9 @@
 #deko{
 	text-decoration:underline
 }
+#format{
+	text-align: right
+}
 
 table{
 	width:350px;

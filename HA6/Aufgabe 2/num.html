@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nummern</title>
+
+    <style type="text/css">
+        body {
+            counter-reset:h1c
+            
+            /* Set a counter named 'section', and it`s initial value is 0. */
+        }
+        
+        h1{
+            counter-reset:h2c
+        }
+
+        h1::before {
+            counter-increment: h1c;
+            /* Increment the value of section counter by 1 */
+            content: counter(h1c) " " ; 
+            /* Display the value of section counter */
+        }
+        
+       h2::before{
+            counter-increment: h2c;
+           content: counter(h1c)"." counter(h2c) " ";
+       }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tiere</h1>
+    <h2>Hund</h2>
+    <h2>Katze</h2>
+    <h1>Farben</h1>
+    <h2>Blau</h2>
+    <h2>Rot</h2>
+    <h2>Gelb</h2>
+    <h1>Land</h1>
+    <h2>Spanien</h2>
+    <h2>Finnland</h2>
+</body>
+
+</html>

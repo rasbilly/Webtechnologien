@@ -1,0 +1,47 @@
+.row::after {  
+ content: "";
+ clear: both;
+ display: block;
+}
+[class*="col-"] { /*Atributselektor*/
+ float: left;
+}
+.col-1 {width: 25vw;}
+.col-2 {width: 75vw;}
+.col-3 {width: 25%;}
+
+
+
+main {
+    border-left-style: solid;
+    border-width: 0.3ex;
+    width: 75vw;
+    background-color: white
+}
+
+header {
+    border-bottom-style: solid;
+    border-width: 0.3ex;
+   
+}
+
+nav{
+    width: 25vw;
+     background-color: white
+}
+#ma{
+    border-bottom-style: solid;
+    border-width: 0.3ex;
+}
+
+body{
+   min-width: 700px; 
+   border-style: solid;
+   border-width: 0.3ex;
+       background-color: orange;
+}
+footer {
+    border-top-style: solid;
+    border-width: 0.3ex;
+    background-color: white
+}

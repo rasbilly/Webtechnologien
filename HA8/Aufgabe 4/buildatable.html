@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<script src="/HA8/Aufgabe 4/montains.js"></script>
+
+
+<style>
+  /* Defines a cleaner look for tables */
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    border: 1px solid black;
+    padding: 3px 8px;
+  }
+
+  th {
+    text-align: left;
+  }
+</style>
+
+
+<body>
+  <script>
+    function buildTable(data) {
+      var table = document.createElement("table")
+      var trHead = document.createElement("tr")
+
+      Object.keys(data[0]).forEach(e => {
+        var th = document.createElement("th")
+        th.appendChild(document.createTextNode(e))
+        trHead.appendChild(th)
+        table.appendChild(trHead)
+      })
+
+      data.forEach(e => {
+        var tr = document.createElement("tr")
+        Object.values(e).forEach(p => {
+          var td = document.createElement("td")
+          td.appendChild(document.createTextNode(p))
+          if (typeof p == "number") {
+            td.style.textAlign = "right"
+          }
+          tr.appendChild(td)
+        })
+        table.appendChild(tr)
+      })
+      return table
+    }
+
+    document.body.appendChild(buildTable(MOUNTAINS));
+  </script>
+
+</body>
+
+</html>

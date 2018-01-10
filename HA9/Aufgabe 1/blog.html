@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <title>Blog</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tobi´s Seite</h1>
+        <nav>
+            <a href="index.html">Willkommen</a> <strong>|</strong>
+            <a href="blog.html">Blog</a> <strong>|</strong> <a href="kontakt.html">Kontakt</a>
+            <strong>|</strong> <a href="autor.html">Über den Autor</a>
+        </nav>
+        <hr>
+    </header>
+
+
+    <main>
+        Blog
+        <section id="inhalt">
+      
+        </section>
+
+
+
+        <section>
+            <form>
+                <input type="text" id="ub" value="Ueberschrift">
+                <br>
+                <textarea rows="5" cols="30" id="text"></textarea>
+                <br>
+                <input type="button" value="push" onclick="send('inhalt', 'ub','text','res')">
+                <input type="reset" value="clear" id="res">
+            </form>
+        </section>
+
+        <script>
+            function send(alt, ub, inh,res) {
+                var uber = document.getElementById(ub).value
+                var inhalt = document.getElementById(inh).value
+
+                var artikel = document.createElement("article")
+                var h2 = document.createElement("h2")
+                var para = document.createElement("p")
+
+                h2.appendChild(document.createTextNode(uber))
+                para.appendChild(document.createTextNode(inhalt))
+                artikel.appendChild(h2)
+                artikel.appendChild(para)
+                
+                document.getElementById(alt).appendChild(artikel)
+                document.getElementById(res).click()
+
+
+            }
+        </script>
+
+    </main>
+    <footer>
+        <nav>
+            <hr><a href="kontakt.html">Konkat</a> <strong>|</strong>
+            <a href="datenschtz.html">Datenschutz</a>
+        </nav>
+
+
+    </footer>
+
+</body>
+
+</html>

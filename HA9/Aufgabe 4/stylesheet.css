@@ -1,0 +1,35 @@
+article{
+    background-image: linear-gradient(to bottom, lightgrey, ivory);
+    margin: 2em;
+    border-style: dotted;
+    border-width: 0.3ex;
+    width: 20em;
+    height: 10em;
+   
+}
+
+nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white
+    
+}
+
+body{
+background-color: wheat;    
+
+background-size: 99%;
+
+		background-repeat: 	no-repeat;
+
+		background-position: top center;
+
+        background-attachment: fixed;
+
+}
+#logo{
+    text-align: right;
+}
+

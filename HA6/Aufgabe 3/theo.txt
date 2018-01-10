@@ -1,0 +1,25 @@
+1.)
+Absolute Positionierung
+• Element wird aus dem normalen Elementfluss herausgelöst
+• Position des Elements orientiert sich am Rand des
+nächsthöheren Elternelements, welches ebenfalls mittels
+Positionierung aus dem Elementfluss herausgelöst wurde
+• Wenn der Anwender im Inhalt scrollt, scrollen absolut
+positionierte Elemente mit
+
+2.)
+Relative Positionierung
+• Element wird aus dem normalen Elementfluss herausgelöst
+• Angaben zu seiner Positionierung orientieren sich an der
+Position, die das Element im Normalfall einnehmen würde
+• Wenn der Anwender im Inhalt scrollt, scrollen relativ
+positionierte Elemente mit
+
+4.)
+Fixe Positionierung
+• Element wird aus dem normalen Elementfluss herausgelöst
+• Positionierung ohne Rücksicht auf eventuell positionierte
+Elternelemente direkt an einer gewünschten Stelle im
+Anzeigenfenster
+• Wenn der Anwender im Inhalt scrollt, scrollen fix positionierte
+Elemente nicht mit 

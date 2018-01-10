@@ -7,8 +7,6 @@
     <style type="text/css">
         body {
             counter-reset:h1c
-            
-            /* Set a counter named 'section', and it`s initial value is 0. */
         }
         
         h1{
@@ -17,9 +15,8 @@
 
         h1::before {
             counter-increment: h1c;
-            /* Increment the value of section counter by 1 */
+    
             content: counter(h1c) " " ; 
-            /* Display the value of section counter */
         }
         
        h2::before{

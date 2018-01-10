@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+    
+    window.onhashchange=function(){
+        startOpen()
+    }
+    
+    
+        function startOpen() {
+            var url = window.location.hash
+            if (url === "") {
+                url = document.getElementById("#home").getAttribute("href")
+            }
+            var otherA = document.querySelectorAll("[href*='#'")
+            var uberschreiben = ""
+            otherA.forEach(e => {
+                if (e.getAttribute("href") == url)
+                    uberschreiben = e
+            })
+
+                if(uberschreiben==""){
+                    alert("# gibt es nicht")
+                }else{
+                    uberschreiben.click()
+                }
+        }
+
+        function wechsel(ident) {
+            var aktu = document.getElementById(ident)
+            var helpActiv = document.querySelectorAll('[class*= "nav-link active"]')[0] //weil erster eintrag (array)
+            console.log(aktu)
+            helpActiv.classList.remove("active")
+            aktu.classList.add("active")
+
+        }
+
+        function openSide(id, tem) {
+            wechsel(id)
+            var contentWeb = document.getElementById("content")
+            var temp = document.getElementById(tem)
+            var clone = temp.content.cloneNode(true)
+
+            while (contentWeb.firstChild) {
+                contentWeb.firstChild.remove()
+            }
+
+            contentWeb.appendChild(clone)
+
+
+
+        }
+    </script>
+
+    <title>Home</title>
+</head>
+
+<body onload=startOpen()>
+
+    <header>
+        <h1>Tobi´s Seite</h1>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navi">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+
+                </form>
+                <div class="navbar-text" style="margin-left: 10px;"> 22.12.2017</div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a id="#home" class="nav-link active" href="#home" onclick="openSide(this.id,'home')">Willkommen</a> </li>
+                    <li class="nav-item"><a id="#blog" class="nav-link" href="#blog" onclick="openSide(this.id,'blog')">Blog</a> </li>
+                    <li class="nav-item"><a id="#kontakt" class="nav-link" href="#kontakt" onclick="openSide(this.id,'kontakt')">Kontakt</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <hr>
+    </header>
+
+
+    <main>
+
+        <div id="content">
+
+        </div>
+
+        <template id="home">
+            hallsa
+        </template>
+
+        <template id="kontakt">
+            KOntakt
+        </template>
+
+        <template id="blog" >
+            
+            <script src="jsonScript.js"></script>
+        Blog
+        <section id="inhalt">
+      
+        </section>
+
+
+
+        <section>
+            <form>
+                <input type="text" id="ub" value="Ueberschrift">
+                <br>
+                <textarea rows="5" cols="30" id="text"></textarea>
+                <br>
+                <input type="button" value="push" onclick="send('inhalt', 'ub','text','res')">
+                <input type="reset" value="clear" id="res">
+            </form>
+        </section>
+
+        <script>
+            function send(alt, ub, inh,res) {
+                var uber = document.getElementById(ub).value
+                var inhalt = document.getElementById(inh).value
+
+                var artikel = document.createElement("article")
+                var h2 = document.createElement("h2")
+                var para = document.createElement("p")
+
+                h2.appendChild(document.createTextNode(uber))
+                para.appendChild(document.createTextNode(inhalt))
+                artikel.appendChild(h2)
+                artikel.appendChild(para)
+                
+                document.getElementById(alt).appendChild(artikel)
+                document.getElementById(res).click()
+
+
+            }
+        </script>
+        
+        </template>
+
+    </main>
+    <footer>
+        <nav>
+            <hr><a href="kontakt.html">Konkat</a> <strong>|</strong>
+            <a href="datenschtz.html">Datenschutz</a>
+        </nav>
+
+
+    </footer>
+
+
+
+</body>
+
+</html>

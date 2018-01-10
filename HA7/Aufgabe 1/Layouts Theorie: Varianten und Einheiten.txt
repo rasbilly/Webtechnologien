@@ -1,0 +1,40 @@
+Welche verschiedenen Layout-Arten gibt es? Was sind die Unterschiede?
+Festes Layout: Bei einem festen Layout sind die Dimensionen in der Einheit Pixel angegeben. NICHT Dynamisch
+
+Flüssiges: wird in Prozenten des Viewport definiert. Abhängig vom Viewport.  Texte oder Bilder bleiben jedoch in ihrer Größe
+erhalten
+
+elastisches Layout:
+Breitenangaben in der
+Einheit em angegeben, die sich auf die Schriftgröße bezieht
+• Das Layout skaliert mit der Schriftgröße, nicht bei Änderungen
+der Bildschirmbreite
+
+Adaptives Layout: festes Layout, welches in mehreren
+Versionen existiert und sich bei Änderung des Viewport anpasst
+
+Responsive Layout:  vereint die Eigenschaften des adaptiven
+und des flüssigen Layouts
+
+
+margin-left: legt den linken außenabstand eines elementes fest. % angaben beziehen sich auf die breite des umschließenden Blocks.
+margin-top: Legt oberenaußenabstand eines elementes fest. % angaben beziehen sich auf die breite des umschließenden Blocks.
+height:
+font-size: vergrößert bzw verkleinert die schriftgröße. 100% normal - <100 verkleinert - >100 vergrößert
+border-top-width: Breite des oberen Rahmens // % ungültig
+
+  
+em: Vertikale größe der schrift. Relativ zur schriftgröße des elternelements //bezieht sich auf font size
+rem: Schriftgrößes  wird immer relativ zum html Element berechnent ( Basiselement)
+unterschied. em unterschiedlich für jedes element, rem konstant
+
+
+
+Viewportabmessungen (Viewport Units) 
+
+
+1/10? 
+vw (viewport width) und 
+vh (viewport height) können Sie Abmessungen in Relation zum aller ersten umschließenden Block (initial containing block) festlegen. 
+Für Darstellungen auf Bildschirmen ist dieser Block identisch mit den Viewportabmessungen, 
+im Drucklayout entspricht er dem bedruckbaren Bereich einer Seite.

@@ -1,0 +1,90 @@
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {
+    width: 25vw;
+    background-color: white;
+}
+
+.col-2 {
+    width: 74vw;
+    left: 25vw
+}
+
+
+
+
+html {
+    min-width: 700px;
+}
+
+body {
+    border-style: solid;
+    border-width: 0.3ex;
+    background-color: #dddddd;
+}
+
+header {
+    border-bottom-style: solid;
+    border-width: 0.3ex;
+    background-color: white
+}
+
+.row nav {
+    position: absolute;
+    left: 0;
+    margin: left:0;
+    padding: left:0;
+
+}
+
+.row ul {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
+ul li a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+main {
+    padding-left: 10px;
+    position: relative;
+    border-left: solid 0.01vw;
+    background-color: white
+}
+
+
+
+footer {
+    position: relative;
+    clear: both;
+    border-top-style: solid;
+    border-width: 0.3ex;
+    background-color: white
+}
+
+
+#logo{
+    text-align: right;
+}
+
+
+
+
+

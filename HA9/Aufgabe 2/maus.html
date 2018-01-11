@@ -14,11 +14,26 @@
 </style>
 <body>
 <script>
+var anzahl = 6
+  var folger=[];
+  for(var i = 0; i< anzahl; i++){
+    var ele = document.createElement("div")
+    ele.className = "trail"
+    document.body.appendChild(ele)
+    folger.push(ele)
+    
+  }
   
+  var mausPunkt = 0
   addEventListener("mousemove", function(event){
-      
-      
-      
+       var punkt = folger[mausPunkt]
+       punkt.style.left = event.pageX+"px"
+       punkt.style.top = event.pageY+"px"
+       mausPunkt = mausPunkt+1
+       if(mausPunkt==anzahl){
+         i=0
+         mausPunkt = 0
+       }
   })
   
   
